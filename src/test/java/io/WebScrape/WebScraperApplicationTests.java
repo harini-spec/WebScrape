@@ -1,10 +1,10 @@
-package io.harini;
+package io.WebScrape;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ScrapeAssignmentApplicationTests {
+class WebScraperApplicationTests {
 
 	@Test
 	void contextLoads() {

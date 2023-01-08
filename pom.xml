@@ -8,46 +8,43 @@
 		<version>3.0.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>io.harini</groupId>
-	<artifactId>Scrape-Assignment</artifactId>
+	<groupId>io.WebScrape</groupId>
+	<artifactId>WebScraper</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Scrape-Assignment</name>
-	<description>Scrape-Assignment</description>
+	<name>WebScraper</name>
+	<description>WebScrape</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+	<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+   <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>1.13.1</version>
+   </dependency>
+
+   <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+   <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.11</version>
+   </dependency>
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
-	   <dependency>
-	      <groupId>org.jsoup</groupId>
-	      <artifactId>jsoup</artifactId>
-	      <version>1.13.1</version>
-	   </dependency>
-	
-	   <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-	   <dependency>
-	      <groupId>org.apache.commons</groupId>
-	      <artifactId>commons-lang3</artifactId>
-	      <version>3.11</version>
-	   </dependency>
-	   
-	   <dependency>
+
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		
-		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-        </dependency>
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

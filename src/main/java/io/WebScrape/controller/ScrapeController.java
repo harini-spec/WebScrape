@@ -1,4 +1,4 @@
-package io.harini.controller;
+package io.WebScrape.controller;
 
 import java.util.ArrayList;
 
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.harini.models.DataModel;
-import io.harini.service.ScrapeService;
+import io.WebScrape.Service.ScrapeService;
+import io.WebScrape.models.DataModel;
 
 @RestController
 @RequestMapping(path = "/")
@@ -18,8 +18,8 @@ public class ScrapeController {
 	private ScrapeService scrapeService;
 	
 	@GetMapping()
-    public ArrayList<DataModel> extractData() {
+	public ArrayList<DataModel> extractData() {
         return  scrapeService.extractData("https://defillama.com/protocols/lending");
     }
-    
+
 }

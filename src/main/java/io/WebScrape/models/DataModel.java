@@ -1,9 +1,7 @@
-package io.harini.models;
+package io.WebScrape.models;
 
 import java.util.List;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
@@ -12,113 +10,93 @@ import lombok.Data;
 @Document(collection = "defillama")
 public class DataModel {
 	
-	@Id
-	@Indexed(unique = true)
-	private String id;
 	private String Name;
-	private List chains;
+	private List Chains;
 	private String _1dChange;
 	private String _7dChange;
 	private String _1mChange;
-	private String tvl;
+	private String Tvl;
 	private String McapTVL;
-	private String borrowed;
-	private String supplied;
-	private String suppliedTvl;
+	private String Borrowed;
+	private String Supplied;
+	private String SuppliedTvl;
 	
 	public DataModel() {}
 	
-	public DataModel(String name, String _1dChange, String _7dChange, String _1mChange, String tvl,
+	public DataModel(String name, List chains, String _1dChange, String _7dChange, String _1mChange, String tvl,
 			String mcapTVL, String borrowed, String supplied, String suppliedTvl) {
 		super();
 		Name = name;
+		Chains = chains;
 		this._1dChange = _1dChange;
 		this._7dChange = _7dChange;
 		this._1mChange = _1mChange;
-		this.tvl = tvl;
+		Tvl = tvl;
 		McapTVL = mcapTVL;
-		this.borrowed = borrowed;
-		this.supplied = supplied;
-		this.suppliedTvl = suppliedTvl;
+		Borrowed = borrowed;
+		Supplied = supplied;
+		SuppliedTvl = suppliedTvl;
 	}
-	
-	public List getChains() {
-		return chains;
-	}
-
-	public void setChains(List chains) {
-		this.chains = chains;
-	}
-
 	public String getName() {
 		return Name;
 	}
-
 	public void setName(String name) {
 		Name = name;
 	}
-
+	public List getChains() {
+		return Chains;
+	}
+	public void setChains(List chains) {
+		Chains = chains;
+	}
 	public String get_1dChange() {
 		return _1dChange;
 	}
-
 	public void set_1dChange(String _1dChange) {
 		this._1dChange = _1dChange;
 	}
-
 	public String get_7dChange() {
 		return _7dChange;
 	}
-
 	public void set_7dChange(String _7dChange) {
 		this._7dChange = _7dChange;
 	}
-
 	public String get_1mChange() {
 		return _1mChange;
 	}
-
 	public void set_1mChange(String _1mChange) {
 		this._1mChange = _1mChange;
 	}
-
 	public String getTvl() {
-		return tvl;
+		return Tvl;
 	}
-
 	public void setTvl(String tvl) {
-		this.tvl = tvl;
+		Tvl = tvl;
 	}
-
 	public String getMcapTVL() {
 		return McapTVL;
 	}
-
 	public void setMcapTVL(String mcapTVL) {
 		McapTVL = mcapTVL;
 	}
-
 	public String getBorrowed() {
-		return borrowed;
+		return Borrowed;
 	}
-
 	public void setBorrowed(String borrowed) {
-		this.borrowed = borrowed;
+		Borrowed = borrowed;
 	}
-
 	public String getSupplied() {
-		return supplied;
+		return Supplied;
 	}
-
 	public void setSupplied(String supplied) {
-		this.supplied = supplied;
+		Supplied = supplied;
 	}
-
 	public String getSuppliedTvl() {
-		return suppliedTvl;
+		return SuppliedTvl;
+	}
+	public void setSuppliedTvl(String suppliedTvl) {
+		SuppliedTvl = suppliedTvl;
 	}
 
-	public void setSuppliedTvl(String suppliedTvl) {
-		this.suppliedTvl = suppliedTvl;
-	}
+	
 }

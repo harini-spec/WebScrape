@@ -1,13 +1,13 @@
-package io.harini;
+package io.WebScrape;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ScrapeAssignmentApplication {
+public class WebScraperApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ScrapeAssignmentApplication.class, args);
+		SpringApplication.run(WebScraperApplication.class, args);
 	}
 
 }
